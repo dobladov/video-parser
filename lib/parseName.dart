@@ -26,7 +26,6 @@ RegExp createRegExp(String re) {
   return RegExp(
     re,
     caseSensitive: false,
-    multiLine: false,
   );
 }
 
