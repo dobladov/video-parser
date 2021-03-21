@@ -1,6 +1,6 @@
 name: video_parser
 description: CLI app/package to extract metadata from a movie or TV show name
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/dobladov/video-parser
 repository: https://github.com/dobladov/video-parser
 issue_tracker: https://github.com/dobladov/video-parser/issues
