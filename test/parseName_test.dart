@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:video_parser/parseName.dart';
+import 'package:video_parser/video_parser.dart';
 
 void main() {
   group('Parse names', () {

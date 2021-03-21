@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 import 'package:args/args.dart';
-import 'package:video_parser/parseName.dart';
+import 'package:video_parser/video_parser.dart';
 
 final packageVersion = '1.0.0';
 
