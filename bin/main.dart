@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:args/args.dart';
 import 'package:video_parser/parseName.dart';
 
@@ -11,7 +12,7 @@ void main(List<String> arguments) {
   var name = args['parse'];
 
   if (name != null) {
-    print(parseName(name));
+    print(jsonEncode(parseName(name)));
   } else {
     print(parser.usage);
   }
