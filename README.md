@@ -20,6 +20,14 @@ Result
 }
 ```
 
+### Build
+
+```bash
+mkdir build
+./tool/build.sh
+## video-parser should be available in build/
+```
+
 ## License
 
 Created from templates made available by Stagehand under a BSD-style
@@ -27,6 +35,5 @@ Created from templates made available by Stagehand under a BSD-style
 
 ## Todo
 
-- [ ] Make possible to integrate it as a package
-- [ ] Use the package on a flutter app
-- [ ] Create an script for release (exe)
+- [ ] Publish the package
+   - [ ] Make possible to integrate it as a package

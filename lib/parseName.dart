@@ -46,7 +46,6 @@ Map<String, String> parseName(String name) {
         results['episode'] = result;
       }
       // Avoid cleaning the . from 5.1
-      // maybe make codec uppercase
       if (key == 'audio' || key == 'codec') {
         results[key] = result;
       } else {
