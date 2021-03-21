@@ -1,4 +1,4 @@
-import 'package:main/helpers.dart';
+import 'package:video_parser/helpers.dart';
 
 final regex = {
   'name': r'(?<name>.*)((?=s\d)|(?=\dx\d)|(?=\W\d{4}\W))',
