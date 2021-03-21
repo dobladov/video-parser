@@ -4,7 +4,9 @@ final regex = {
   'name': r'(?<name>.*)((?=s\d)|(?=\dx\d)|(?=\W\d{4}\W))',
   'year': r'\(?(?<year>\d{4})[^\w]',
   'season': r'S(?<season>\d+)E\d+',
+  'seasonV2': r'\W(?<seasonV2>\d+)x\d+\W',
   'episode': r'S\d+E(?<episode>\d+)',
+  'episodeV2': r'\W\d+x(?<episodeV2>\d+)\W',
   'episodeAnime': r'\WE(?<episodeAnime>\d+\W)',
   // Complete language using: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
   'language':
@@ -36,6 +38,12 @@ Map<String, String> parseName(String name) {
     if (result != null) {
       if (key == 'language' || key == 'codec' || key == 'source') {
         result = result.toLowerCase();
+      }
+      if (key == 'seasonV2') {
+        results['season'] = result;
+      }
+      if (key == 'episodeV2') {
+        results['episode'] = result;
       }
       // Avoid cleaning the . from 5.1
       // maybe make codec uppercase
