@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:args/args.dart';
 import 'package:video_parser/video_parser.dart';
 
-final packageVersion = '1.0.0';
+final packageVersion = '1.0.1';
 
 void main(List<String> arguments) {
   var parser = ArgParser();

@@ -25,8 +25,8 @@ final _regex = {
 /// Parses a given [name]
 ///
 /// Returns a `Map` witht he extracted values
-Map<String, String> parseName(String name) {
-  final results = <String, String>{};
+Map<String, String?> parseName(String name) {
+  final results = <String, String?>{};
 
   _regex.forEach((key, re) {
     var result = createRegExp(re).firstMatch(name)?.namedGroup(key);
