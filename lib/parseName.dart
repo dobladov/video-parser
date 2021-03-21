@@ -1,6 +1,6 @@
-import 'package:video_parser/helpers.dart';
+import 'package:video_parser/src/helpers.dart';
 
-final regex = {
+final _regex = {
   'name': r'(?<name>.*)((?=s\d)|(?=\dx\d)|(?=\W\d{4}\W))',
   'year': r'\(?(?<year>\d{4})[^\w]',
   'season': r'S(?<season>\d+)E\d+',
@@ -22,17 +22,13 @@ final regex = {
   'group': r'\W(\[|\{)?(?<group>(\w|\d){3,})(\]|\})?$'
 };
 
-RegExp createRegExp(String re) {
-  return RegExp(
-    re,
-    caseSensitive: false,
-  );
-}
-
+/// Parses a given [name]
+///
+/// Returns a `Map` witht he extracted values
 Map<String, String> parseName(String name) {
   final results = <String, String>{};
 
-  regex.forEach((key, re) {
+  _regex.forEach((key, re) {
     var result = createRegExp(re).firstMatch(name)?.namedGroup(key);
     if (result != null) {
       if (key == 'language' || key == 'codec' || key == 'source') {
